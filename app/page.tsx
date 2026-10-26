@@ -1,4 +1,10 @@
 import Image from "next/image";
+<link
+  rel="icon"
+  href="/icon?<generated>"
+  type="image/<generated>"
+  sizes="<generated>"
+/>;
 
 export default function Home() {
   return (
@@ -32,7 +38,7 @@ export default function Home() {
             href="https://wa.me/5562981720585"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[#1769aa] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#105487]"
+            className="rounded-full bg-[#1769aa] px-5 py-3 text-sm font-semibold text-white! transition hover:bg-[#105487] hover:text-white!"
           >
             Fale conosco
           </a>
@@ -68,7 +74,7 @@ export default function Home() {
                   href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20ScannerGO."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#1769aa] px-7 py-4 font-semibold text-white transition hover:bg-[#105487]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#1769aa] px-7 py-4 font-semibold text-white! transition hover:bg-[#105487]"
                 >
                   Quero conhecer
                 </a>
@@ -115,19 +121,17 @@ export default function Home() {
                 <p className="text-lg font-semibold text-[#172b4d]">
                   Tecnologia para sua clínica
                 </p>
-                <p className="mt-2 text-sm leading-6 text-slate-500">
-                  <div className="flex min-h-80 items-center justify-center rounded-3xl border border-slate-200 bg-[#f8fafc] p-6 md:min-h-115">
-                    <Image
-                      src="/scanner-intraoral.jpeg"
-                      alt="Scanner intraoral Runyes 3DS Mega V5"
-                      width={700}
-                      height={600}
-                      priority
-                      className="h-auto max-h-105
+                <div className="flex min-h-80 items-center justify-center rounded-3xl border border-slate-200 bg-[#f8fafc] p-6 md:min-h-115">
+                  <Image
+                    src="/scanner.jpeg"
+                    alt="Scanner intraoral Runyes 3DS Mega V5"
+                    width={700}
+                    height={600}
+                    priority
+                    className="h-auto max-h-105
                        w-full object-contain"
-                    />
-                  </div>
-                </p>
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -298,11 +302,95 @@ export default function Home() {
                   href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20assinatura%20ScannerGO."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#172b4d] transition hover:bg-blue-50"
+                  className="rounded-full bg-[#1769aa] px-6 py-3 font-semibold text-white transition hover:bg-[#105487]"
                 >
                   Falar com a equipe
                 </a>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="como-funciona" className="bg-white px-6 py-20 md:py-28">
+          <div className="mx-auto max-w-6xl">
+            <div className="mx-auto mb-14 max-w-2xl text-center">
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#1769aa]">
+                Simples e descomplicado
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                Como funciona a assinatura?
+              </h2>
+
+              <p className="mt-5 text-base leading-7 text-slate-600 md:text-lg">
+                Um caminho mais acessível para levar a tecnologia do
+                escaneamento intraoral à sua rotina clínica.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
+                  01
+                </span>
+                <h3 className="mt-5 text-xl font-bold text-slate-900">
+                  Entre em contato
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Converse com nossa equipe e conheça a solução para sua
+                  clínica.
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
+                  02
+                </span>
+                <h3 className="mt-5 text-xl font-bold text-slate-900">
+                  Conheça seu plano
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Entenda as condições da assinatura e avalie a opção adequada
+                  para você.
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
+                  03
+                </span>
+                <h3 className="mt-5 text-xl font-bold text-slate-900">
+                  Prepare sua clínica
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Receba orientações para a configuração e a implementação do
+                  scanner.
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
+                  04
+                </span>
+                <h3 className="mt-5 text-xl font-bold text-slate-900">
+                  Comece a utilizar
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Conte com treinamento e suporte conforme as condições
+                  contratadas.
+                </p>
+              </article>
+            </div>
+
+            <div className="mt-12 text-center">
+              <a
+                href="https://wa.me/5562981720585"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-[#1769aa] px-8 py-4 font-semibold text-white! transition hover:bg-[#105487]"
+              >
+                Falar com a equipe
+              </a>
             </div>
           </div>
         </section>
