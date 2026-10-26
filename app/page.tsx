@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+
 <link
   rel="icon"
   href="/icon?<generated>"
@@ -7,6 +10,8 @@ import Image from "next/image";
 />;
 
 export default function Home() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   return (
     <div className="min-h-screen">
       {/* Cabeçalho */}
@@ -15,10 +20,12 @@ export default function Home() {
           <a
             href="#"
             className="text-2xl font-bold tracking-tight text-[#172b4d]"
+            onClick={() => setMenuAberto(false)}
           >
             Scanner<span className="text-[#1769aa]">GO</span>
           </a>
 
+          {/* Navegação para computador */}
           <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
             <a href="#beneficios" className="transition hover:text-[#1769aa]">
               Benefícios
@@ -34,15 +41,93 @@ export default function Home() {
             </a>
           </nav>
 
-          <a
-            href="https://wa.me/5562981720585"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-[#1769aa] px-5 py-3 text-sm font-semibold text-white! transition hover:bg-[#105487] hover:text-white!"
-          >
-            Fale conosco
-          </a>
+          <div className="flex items-center gap-3">
+            {/* Botão para computador */}
+            <a
+              href="https://wa.me/5562981720585"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden rounded-full bg-[#1769aa] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#105487] md:inline-flex"
+            >
+              Fale conosco
+            </a>
+
+            {/* Botão do menu mobile */}
+            <button
+              type="button"
+              aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={menuAberto}
+              aria-controls="menu-mobile"
+              onClick={() => setMenuAberto(!menuAberto)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-[#172b4d] transition hover:bg-slate-50 md:hidden"
+            >
+              {menuAberto ? (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="h-6 w-6"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" d="m6 6 12 12M18 6 6 18" />
+                </svg>
+              ) : (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="h-6 w-6"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Navegação para celular */}
+        {menuAberto && (
+          <nav
+            id="menu-mobile"
+            className="border-t border-slate-200 bg-white px-6 py-5 md:hidden"
+          >
+            <div className="mx-auto flex max-w-7xl flex-col gap-2">
+              <a
+                href="#beneficios"
+                onClick={() => setMenuAberto(false)}
+                className="rounded-xl px-4 py-3 font-medium text-[#172b4d] transition hover:bg-blue-50 hover:text-[#1769aa]"
+              >
+                Benefícios
+              </a>
+              <a
+                href="#como-funciona"
+                onClick={() => setMenuAberto(false)}
+                className="rounded-xl px-4 py-3 font-medium text-[#172b4d] transition hover:bg-blue-50 hover:text-[#1769aa]"
+              >
+                Como funciona
+              </a>
+              <a
+                href="#duvidas"
+                onClick={() => setMenuAberto(false)}
+                className="rounded-xl px-4 py-3 font-medium text-[#172b4d] transition hover:bg-blue-50 hover:text-[#1769aa]"
+              >
+                Dúvidas
+              </a>
+              <a
+                href="https://wa.me/5562981720585"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuAberto(false)}
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-[#1769aa] px-5 py-3 font-semibold text-white! transition hover:bg-[#105487]"
+              >
+                Fale com a equipe
+              </a>
+            </div>
+          </nav>
+        )}
       </header>
 
       {/* Seção principal */}
