@@ -594,6 +594,184 @@ export default function Home() {
           </div>
         </section>
 
+        {/* O que está incluído */}
+        <section id="incluso" className="bg-white px-6 py-20 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#1769aa]">
+                Uma solução completa
+              </span>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#172b4d] md:text-4xl">
+                Mais do que um scanner. Apoio para sua clínica.
+              </h2>
+
+              <p className="mt-5 text-base leading-7 text-slate-600 md:text-lg">
+                Tenha acesso à tecnologia e conte com orientação para
+                incorporá-la à rotina da sua clínica, conforme as condições do
+                plano contratado.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-[#1769aa]/50 hover:shadow-md">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <rect x="7" y="3" width="10" height="18" rx="2" />
+                    <path strokeLinecap="round" d="M10 6h4M10 18h4" />
+                  </svg>
+                </div>
+                <h3 className="mt-5 text-lg font-bold text-[#172b4d]">
+                  Scanner intraoral
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Acesso ao equipamento para levar o escaneamento intraoral à
+                  rotina da clínica.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-[#1769aa]/50 hover:shadow-md">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"
+                    />
+                    <circle cx="12" cy="12" r="4" />
+                  </svg>
+                </div>
+                <h3 className="mt-5 text-lg font-bold text-[#172b4d]">
+                  Configuração inicial
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Orientação para preparar o equipamento e iniciar sua
+                  utilização.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-[#1769aa]/50 hover:shadow-md">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="8" r="4" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 21v-2a7 7 0 0 1 14 0v2M9 8l2 2 4-4"
+                    />
+                  </svg>
+                </div>
+                <h3 className="mt-5 text-lg font-bold text-[#172b4d]">
+                  Treinamento
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Orientação para você e sua equipe utilizarem o equipamento.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-[#1769aa]/50 hover:shadow-md">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 3 4 6v5c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-3Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m9 12 2 2 4-4"
+                    />
+                  </svg>
+                </div>
+                <h3 className="mt-5 text-lg font-bold text-[#172b4d]">
+                  Suporte técnico
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Apoio durante a utilização, conforme as condições do plano
+                  contratado.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-[#1769aa]/50 hover:shadow-md sm:col-span-2 lg:col-span-2">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 12a9 9 0 1 0 3-6.7L3 8"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 3v5h5m4-1v5l3 2"
+                    />
+                  </svg>
+                </div>
+                <h3 className="mt-5 text-lg font-bold text-[#172b4d]">
+                  Acompanhamento
+                </h3>
+                <p className="mt-2 max-w-xl text-sm leading-6 text-slate-600">
+                  Conte com apoio para integrar a tecnologia ao dia a dia da
+                  clínica, de acordo com os serviços previstos na contratação.
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-8 text-center text-xs leading-5 text-slate-500">
+              O computador ou notebook compatível deve ser disponibilizado pela
+              clínica. Os serviços incluídos dependem das condições do plano
+              contratado.
+            </p>
+
+            <div className="mt-8 text-center">
+              <a
+                href="https://wa.me/5562981720585"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-full bg-[#1769aa] px-7 py-3 font-semibold text-white! transition hover:bg-[#105487]"
+              >
+                Conhecer a solução
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Dúvidas frequentes */}
         <section id="duvidas" className="bg-white px-6 py-20 lg:px-10">
           <div className="mx-auto max-w-4xl">
