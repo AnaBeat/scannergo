@@ -222,6 +222,120 @@ export default function Home() {
           </div>
         </section>
 
+        {/* A dor: comprar ou assinar */}
+        <section id="comparativo" className="bg-[#f8fafc] px-6 py-20 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#1769aa]">
+                Uma nova possibilidade
+              </span>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#172b4d] md:text-4xl">
+                Por que imobilizar capital na compra do equipamento?
+              </h2>
+
+              <p className="mt-5 text-base leading-7 text-slate-600 md:text-lg">
+                Entrar na odontologia digital não precisa começar com a compra
+                de um equipamento de alto valor. Com a ScannerGO, você pode
+                acessar essa tecnologia por assinatura.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {/* Compra tradicional */}
+              <div className="rounded-3xl border border-slate-200 bg-white p-7 md:p-9">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className="h-6 w-6 text-slate-600"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 7h18M5 7l1 13h12l1-13M9 7V4h6v3"
+                    />
+                  </svg>
+                </div>
+
+                <h3 className="mt-5 text-xl font-bold text-[#172b4d]">
+                  Compra do equipamento
+                </h3>
+
+                <p className="mt-2 leading-7 text-slate-600">
+                  A aquisição exige um investimento inicial que pode comprometer
+                  parte do capital disponível da clínica.
+                </p>
+
+                <ul className="mt-6 space-y-3 text-sm text-slate-600">
+                  <li className="flex gap-3">
+                    <span className="text-slate-400">•</span>
+                    Alto investimento inicial
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-slate-400">•</span>
+                    Capital comprometido na aquisição
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-slate-400">•</span>
+                    Treinamento e suporte dependem das condições da compra
+                  </li>
+                </ul>
+              </div>
+
+              {/* ScannerGO */}
+              <div className="rounded-3xl border-2 border-[#1769aa] bg-white p-7 shadow-sm md:p-9">
+                <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-[#1769aa]">
+                  Conheça a alternativa
+                </span>
+
+                <h3 className="mt-4 text-xl font-bold text-[#172b4d]">
+                  ScannerGO por assinatura
+                </h3>
+
+                <p className="mt-2 leading-7 text-slate-600">
+                  Acesse o scanner intraoral com uma mensalidade prevista em
+                  contrato e conte com apoio para incorporar a tecnologia à
+                  rotina.
+                </p>
+
+                <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                  <li className="flex gap-3">
+                    <span className="font-bold text-[#1769aa]">✓</span>
+                    Menor investimento inicial
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-bold text-[#1769aa]">✓</span>
+                    Mensalidade previsível conforme o plano
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-bold text-[#1769aa]">✓</span>
+                    Treinamento e suporte conforme as condições contratadas
+                  </li>
+                </ul>
+
+                <a
+                  href="https://wa.me/5562981720585"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#1769aa] px-6 py-3 font-semibold text-white! transition hover:bg-[#105487]"
+                >
+                  Quero conhecer
+                </a>
+              </div>
+            </div>
+
+            <p className="mt-6 text-center text-xs leading-5 text-slate-500">
+              A disponibilidade dos serviços e as condições da assinatura são
+              definidas no plano e no contrato. O computador compatível não está
+              incluído na locação padrão.
+            </p>
+          </div>
+        </section>
+
         {/* Seção de benefícios */}
         <section id="beneficios" className="bg-[#f8fafc] py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
