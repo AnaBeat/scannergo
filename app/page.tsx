@@ -344,7 +344,145 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bloco 3 - Como funciona */}
+        {/* Bloco 3 - Vantagens do ScannerGO */}
+        <section id="vantagens" className="bg-white px-6 py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#1769aa]">
+                Tecnologia em destaque
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#172b4d] sm:text-4xl">
+                Mais tecnologia para a sua rotina clínica.
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Conheça os recursos do scanner intraoral Runyes 3DS Mega (V5) e
+                descubra novas possibilidades para o fluxo digital da sua
+                clínica.
+              </p>
+            </div>
+
+            <div className="mt-14 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+              <div className="flex min-h-80 items-center justify-center rounded-3xl bg-[#f5f8fc] p-8 sm:min-h-110 sm:p-12">
+                <Image
+                  src="/scanner-1.jpg"
+                  alt="Scanner intraoral Runyes 3DS Mega V5"
+                  width={800}
+                  height={600}
+                  className="h-auto max-h-100 w-full object-contain"
+                />
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <article className="rounded-2xl border border-[#e1e8f0] p-6 transition hover:border-[#1769aa] hover:shadow-md">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eaf3fb] text-[#1769aa]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 3v18M3 12h18" />
+                      <circle cx="12" cy="12" r="8" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#172b4d]">
+                    Leveza e ergonomia
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    Design pensado para facilitar o manuseio durante o
+                    escaneamento.
+                  </p>
+                </article>
+
+                <article className="rounded-2xl border border-[#e1e8f0] p-6 transition hover:border-[#1769aa] hover:shadow-md">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eaf3fb] text-[#1769aa]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 12s3.3-6 9-6 9 6 9 6-3.3 6-9 6-9-6-9-6Z" />
+                      <circle cx="12" cy="12" r="2.5" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#172b4d]">
+                    Escaneamento digital
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    Capture informações da arcada dentária para trabalhar com
+                    modelos digitais em 3D.
+                  </p>
+                </article>
+
+                <article className="rounded-2xl border border-[#e1e8f0] p-6 transition hover:border-[#1769aa] hover:shadow-md">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eaf3fb] text-[#1769aa]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <path d="m7 15 3-3 2 2 4-5 2 3" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#172b4d]">
+                    Recursos de software
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    O catálogo apresenta ferramentas como simulação ortodôntica
+                    e refinamento de alta resolução.
+                  </p>
+                </article>
+
+                <article className="rounded-2xl border border-[#e1e8f0] p-6 transition hover:border-[#1769aa] hover:shadow-md">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eaf3fb] text-[#1769aa]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 16V4m-4 4 4-4 4 4" />
+                      <path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#172b4d]">
+                    Compartilhamento digital
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    O material apresenta recursos de envio de casos pela nuvem e
+                    compartilhamento digital.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <a
+                href="https://wa.me/5562981720585"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-[#1769aa] px-7 py-3.5 text-sm font-semibold text-white! transition hover:bg-[#12558b]"
+              >
+                Conheça o scanner
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Bloco 4 - Como funciona */}
         <section
           id="como-funciona"
           className="bg-[#f5f8fc] px-6 py-20 sm:py-24"
@@ -474,7 +612,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bloco 4 - O que está incluído */}
+        {/* Bloco 5 - O que está incluído */}
         <section id="incluso" className="bg-white px-6 py-20 lg:px-10">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
@@ -652,7 +790,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bloco 5 - Para quem é */}
+        {/* Bloco 6 - Para quem é */}
         <section id="para-quem-e" className="bg-white py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
@@ -763,7 +901,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bloco 6 - Benefícios */}
+        {/* Bloco 7 - Benefícios */}
         <section id="beneficios" className="bg-[#f8fafc] py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mx-auto max-w-3xl text-center">
@@ -937,7 +1075,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bloco 7 — Demonstração */}
+        {/* Bloco 8 — Demonstração */}
         <section
           id="demonstracao"
           className="relative isolate overflow-hidden bg-[#172b4d] px-6 py-20 sm:py-28"
@@ -1051,7 +1189,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bloco 8 - Dúvidas frequentes */}
+        {/* Bloco 9 - Dúvidas frequentes */}
         <section id="duvidas" className="bg-white px-6 py-20 lg:px-10">
           <div className="mx-auto max-w-4xl">
             <div className="mb-12 text-center">
@@ -1166,7 +1304,7 @@ export default function Home() {
 
               <div className="mt-8 overflow-hidden rounded-3xl border border-[#e1e8f0] bg-white p-5 sm:p-8">
                 <Image
-                  src="/scanner.jpeg"
+                  src="/scanner-2.jpg"
                   alt="Scanner intraoral da ScannerGO"
                   width={1200}
                   height={800}
@@ -1189,7 +1327,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Bloco 9 - Formulário */}
+            {/* Formulário */}
             <div className="rounded-3xl border border-[#e1e8f0] bg-white p-6 shadow-sm sm:p-9">
               <h3 className="text-2xl font-bold text-[#172b4d]">
                 Fale com nossa equipe
