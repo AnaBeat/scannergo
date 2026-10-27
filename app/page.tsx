@@ -1451,8 +1451,7 @@ export default function Home() {
 
           <div className="mx-auto mt-8 max-w-7xl border-t border-white/15 pt-6">
             <p className="text-xs text-slate-400">
-              © {new Date().getFullYear()} ScannerGO. Todos os direitos
-              reservados.
+              © 2026 ScannerGO. Todos os direitos reservados.
             </p>
           </div>
         </footer>
