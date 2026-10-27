@@ -1,6 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import {
+  HeartPlus,
+  Scan,
+  Screw,
+  ToothbrushSparkles,
+  Sparkle,
+} from "lucide-react";
 
 <link
   rel="icon"
@@ -47,7 +54,7 @@ export default function Home() {
               href="https://wa.me/5562981720585"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded-full bg-[#1769aa] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#105487] md:inline-flex"
+              className="hidden rounded-full bg-[#1769aa] px-5 py-3 text-sm font-semibold text-white! transition hover:bg-[#105487] md:inline-flex"
             >
               Fale conosco
             </a>
@@ -130,9 +137,20 @@ export default function Home() {
         )}
       </header>
 
-      {/* Seção principal */}
       <main>
-        <section className="overflow-hidden bg-white">
+        {/* Botão flutuante — voltar ao topo */}
+        <a
+          href="#topo"
+          aria-label="Voltar ao início da página"
+          title="Voltar ao início"
+          className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-[#1769aa] text-2xl text-white! shadow-lg transition hover:-translate-y-1 hover:bg-[#12558b] focus:outline-none focus:ring-4 focus:ring-blue-200"
+        >
+          <span aria-hidden="true">↑</span>
+        </a>
+
+        {/* Bloco 1 - Hero */}
+
+        <section id="topo" className="overflow-hidden bg-white">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-2 lg:px-10">
             <div>
               <span className="mb-6 inline-flex rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-[#1769aa]">
@@ -156,7 +174,7 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20ScannerGO."
+                  href="#como-funciona"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#1769aa] px-7 py-4 font-semibold text-white! transition hover:bg-[#105487]"
@@ -165,10 +183,10 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#como-funciona"
+                  href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20ScannerGO."
                   className="inline-flex min-h-14 items-center justify-center rounded-full border border-slate-300 px-7 py-4 font-semibold text-[#172b4d] transition hover:border-[#1769aa] hover:text-[#1769aa]"
                 >
-                  Como funciona?
+                  Falar pelo Whatsapp
                 </a>
               </div>
 
@@ -177,7 +195,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Espaço reservado para a imagem do scanner */}
             <div className="flex min-h-80 items-center justify-center rounded-3xl border border-slate-200 bg-[#f8fafc] p-8 md:min-h-115">
               <div className="max-w-sm text-center">
                 <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-2xl bg-blue-100 text-[#1769aa]">
@@ -222,7 +239,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* A dor: comprar ou assinar */}
+        {/* Bloco 2 - Comparativo */}
         <section id="comparativo" className="bg-[#f8fafc] px-6 py-20 lg:px-10">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
@@ -336,249 +353,121 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção de benefícios */}
-        <section id="beneficios" className="bg-[#f8fafc] py-20 md:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        {/* Bloco 3 - Como funciona */}
+        <section
+          id="como-funciona"
+          className="bg-[#f5f8fc] px-6 py-20 sm:py-24"
+        >
+          <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-semibold uppercase tracking-widest text-[#1769aa]">
-                Uma nova forma de começar
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#1769aa]">
+                Como funciona
               </span>
 
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#172b4d] sm:text-4xl">
-                Odontologia digital sem um grande investimento inicial
+                Da primeira conversa ao seu primeiro escaneamento.
               </h2>
 
-              <p className="mt-5 text-lg leading-8 text-slate-600">
-                Tenha acesso à tecnologia de escaneamento intraoral por
-                assinatura, com treinamento e suporte para sua clínica.
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Um caminho simples para incorporar o escaneamento intraoral à
+                rotina da sua clínica, com orientação e suporte.
               </p>
             </div>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <path d="M3 10h18M7 15h4" />
-                  </svg>
+            <div className="relative mx-auto mt-16 max-w-4xl">
+              <div className="absolute bottom-10 left-6 top-10 w-px bg-[#cbdced] sm:left-8" />
+
+              <div className="space-y-10">
+                <div className="relative flex gap-5 sm:gap-7">
+                  <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#cbdced] bg-white text-lg font-bold text-[#1769aa] sm:h-16 sm:w-16">
+                    01
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-[#e1e8f0] bg-white p-5 shadow-sm sm:p-7">
+                    <h3 className="text-lg font-semibold text-[#172b4d] sm:text-xl">
+                      Fale conosco
+                    </h3>
+                    <p className="mt-2 leading-7 text-gray-600">
+                      Entre em contato com a equipe ScannerGO e conte o que sua
+                      clínica precisa.
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
-                  Preserve seu capital
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Comece na odontologia digital sem precisar comprar o scanner
-                  de uma só vez.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 7v5l3 2" />
-                  </svg>
+                <div className="relative flex gap-5 sm:gap-7">
+                  <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#cbdced] bg-white text-lg font-bold text-[#1769aa] sm:h-16 sm:w-16">
+                    02
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-[#e1e8f0] bg-white p-5 shadow-sm sm:p-7">
+                    <h3 className="text-lg font-semibold text-[#172b4d] sm:text-xl">
+                      Conheça o scanner
+                    </h3>
+                    <p className="mt-2 leading-7 text-gray-600">
+                      Conheça o equipamento e tire suas dúvidas antes de
+                      decidir.
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
-                  Mais previsibilidade
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Organize o planejamento financeiro da clínica com uma
-                  mensalidade definida em contrato.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3Z" />
-                    <path d="M19 16v5M16.5 18.5h5" />
-                  </svg>
+                <div className="relative flex gap-5 sm:gap-7">
+                  <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#cbdced] bg-white text-lg font-bold text-[#1769aa] sm:h-16 sm:w-16">
+                    03
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-[#e1e8f0] bg-white p-5 shadow-sm sm:p-7">
+                    <h3 className="text-lg font-semibold text-[#172b4d] sm:text-xl">
+                      Escolha a assinatura
+                    </h3>
+                    <p className="mt-2 leading-7 text-gray-600">
+                      Conheça as condições disponíveis e escolha a opção
+                      adequada à sua clínica.
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
-                  Treinamento e suporte
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Conte com orientação para começar a utilizar o equipamento e
-                  suporte conforme as condições da assinatura.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <path d="M4 19V5M4 19h16" />
-                    <path d="m7 15 4-4 3 2 5-6" />
-                  </svg>
+                <div className="relative flex gap-5 sm:gap-7">
+                  <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#cbdced] bg-white text-lg font-bold text-[#1769aa] sm:h-16 sm:w-16">
+                    04
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-[#e1e8f0] bg-white p-5 shadow-sm sm:p-7">
+                    <h3 className="text-lg font-semibold text-[#172b4d] sm:text-xl">
+                      Receba a configuração e o treinamento
+                    </h3>
+                    <p className="mt-2 leading-7 text-gray-600">
+                      Após a contratação, receba orientação para a configuração
+                      inicial e o uso do equipamento.
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
-                  Evolua sua clínica
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Dê um passo em direção aos fluxos digitais de trabalho na
-                  odontologia.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 3 4 7v5c0 5 3.5 7.5 8 9 4.5-1.5 8-4 8-9V7l-8-4Z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
+                <div className="relative flex gap-5 sm:gap-7">
+                  <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#cbdced] bg-white text-lg font-bold text-[#1769aa] sm:h-16 sm:w-16">
+                    05
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-[#e1e8f0] bg-white p-5 shadow-sm sm:p-7">
+                    <h3 className="text-lg font-semibold text-[#172b4d] sm:text-xl">
+                      Comece a escanear
+                    </h3>
+                    <p className="mt-2 leading-7 text-gray-600">
+                      Incorpore o escaneamento intraoral ao fluxo de trabalho da
+                      sua clínica, conforme suas necessidades.
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
-                  Mais tranquilidade
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Tenha um modelo de contratação com serviços e condições
-                  definidos previamente.
-                </p>
-              </article>
-
-              <article className="flex flex-col items-start rounded-2xl bg-[#172b4d] p-7 text-white">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <path d="M4 12h16M13 5l7 7-7 7" />
-                  </svg>
+                <div className="relative flex gap-5 sm:gap-7">
+                  <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#1769aa] bg-[#1769aa] text-lg font-bold text-white sm:h-16 sm:w-16">
+                    06
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-[#cbdced] bg-white p-5 shadow-sm sm:p-7">
+                    <h3 className="text-lg font-semibold text-[#172b4d] sm:text-xl">
+                      Conte com nosso suporte
+                    </h3>
+                    <p className="mt-2 leading-7 text-gray-600">
+                      Conte com o suporte previsto no plano contratado durante a
+                      utilização do scanner.
+                    </p>
+                  </div>
                 </div>
-
-                <h3 className="mt-5 text-xl font-semibold">
-                  Pronto para dar o próximo passo?
-                </h3>
-                <p className="mt-3 flex-1 leading-7 text-slate-300">
-                  Conheça a proposta da ScannerGO e descubra se a assinatura faz
-                  sentido para sua clínica.
-                </p>
-
-                <a
-                  href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20assinatura%20ScannerGO."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#1769aa] px-6 py-3 font-semibold text-white transition hover:bg-[#105487]"
-                >
-                  Falar com a equipe
-                </a>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="como-funciona" className="bg-white px-6 py-20 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <div className="mx-auto mb-14 max-w-2xl text-center">
-              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#1769aa]">
-                Simples e descomplicado
-              </span>
-
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
-                Como funciona a assinatura?
-              </h2>
-
-              <p className="mt-5 text-base leading-7 text-slate-600 md:text-lg">
-                Um caminho mais acessível para levar a tecnologia do
-                escaneamento intraoral à sua rotina clínica.
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
-                  01
-                </span>
-                <h3 className="mt-5 text-xl font-bold text-slate-900">
-                  Entre em contato
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Converse com nossa equipe e conheça a solução para sua
-                  clínica.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
-                  02
-                </span>
-                <h3 className="mt-5 text-xl font-bold text-slate-900">
-                  Conheça seu plano
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Entenda as condições da assinatura e avalie a opção adequada
-                  para você.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
-                  03
-                </span>
-                <h3 className="mt-5 text-xl font-bold text-slate-900">
-                  Prepare sua clínica
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Receba orientações para a configuração e a implementação do
-                  scanner.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-lg font-bold text-[#1769aa]">
-                  04
-                </span>
-                <h3 className="mt-5 text-xl font-bold text-slate-900">
-                  Comece a utilizar
-                </h3>
-                <p className="mt-3 leading-7 text-slate-600">
-                  Conte com treinamento e suporte conforme as condições
-                  contratadas.
-                </p>
-              </article>
+              </div>
             </div>
 
             <div className="mt-12 text-center">
@@ -586,15 +475,15 @@ export default function Home() {
                 href="https://wa.me/5562981720585"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-[#1769aa] px-8 py-4 font-semibold text-white! transition hover:bg-[#105487]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#1769aa] px-7 py-3.5 text-sm font-semibold text-white! transition hover:bg-[#12558b]"
               >
-                Falar com a equipe
+                Quero conhecer a ScannerGO
               </a>
             </div>
           </div>
         </section>
 
-        {/* O que está incluído */}
+        {/* Bloco 4 - O que está incluído */}
         <section id="incluso" className="bg-white px-6 py-20 lg:px-10">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
@@ -772,7 +661,404 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Dúvidas frequentes */}
+        {/* Bloco 5 - Para quem é */}
+        <section id="para-quem-e" className="bg-white py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#1769aa]">
+                Uma solução para sua clínica
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#172b4d] sm:text-4xl">
+                A ScannerGO acompanha a evolução da sua especialidade
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Descubra como o escaneamento intraoral pode fazer parte da
+                rotina da sua clínica, com acesso à tecnologia por assinatura.
+              </p>
+            </div>
+
+            <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-2xl border border-gray-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#edf5fc] text-[#1769aa]">
+                  <Scan size={25} strokeWidth={1.5} />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-[#172b4d]">
+                  Ortodontia
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Incorpore o escaneamento digital ao planejamento e ao
+                  acompanhamento dos tratamentos ortodônticos.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#edf5fc] text-[#1769aa]">
+                  <Screw size={25} strokeWidth={1.5} />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-[#172b4d]">
+                  Implantodontia
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Explore o fluxo digital para auxiliar no planejamento e nas
+                  etapas protéticas dos tratamentos com implantes.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#edf5fc] text-[#1769aa]">
+                  <HeartPlus size={25} strokeWidth={1.5} />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-[#172b4d]">
+                  Prótese dentária
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Integre modelos digitais ao fluxo de trabalho com laboratórios
+                  e às etapas de reabilitação oral.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#edf5fc] text-[#1769aa]">
+                  <ToothbrushSparkles size={25} strokeWidth={1.5} />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-[#172b4d]">
+                  Alinhadores
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Considere o escaneamento intraoral no fluxo digital de
+                  tratamentos com alinhadores, conforme o sistema utilizado.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#edf5fc] text-[#1769aa]">
+                  <Sparkle size={25} strokeWidth={1.5} />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-[#172b4d]">
+                  Odontologia estética
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Utilize recursos digitais como parte do planejamento de
+                  procedimentos estéticos e restauradores.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="text-3xl">🏥</div>
+                <h3 className="mt-5 text-lg font-semibold text-[#172b4d]">
+                  Clínicas multidisciplinares
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Leve a tecnologia digital para uma rotina que reúne diferentes
+                  especialidades odontológicas.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <a
+                href="https://wa.me/5562981720585"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-[#1769aa] px-7 py-3.5 text-sm font-semibold text-white! shadow-sm transition hover:bg-[#12558b]"
+              >
+                Descobrir se a ScannerGO é para mim
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Bloco 6 - Benefícios */}
+        <section id="beneficios" className="bg-[#f8fafc] py-20 md:py-28">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#1769aa]">
+                Uma nova forma de começar
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#172b4d] sm:text-4xl">
+                Odontologia digital sem um grande investimento inicial
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                Tenha acesso à tecnologia de escaneamento intraoral por
+                assinatura, com treinamento e suporte para sua clínica.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 10h18M7 15h4" />
+                  </svg>
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
+                  Preserve seu capital
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Comece na odontologia digital sem precisar comprar o scanner
+                  de uma só vez.
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
+                  Mais previsibilidade
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Organize o planejamento financeiro da clínica com uma
+                  mensalidade definida em contrato.
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3Z" />
+                    <path d="M19 16v5M16.5 18.5h5" />
+                  </svg>
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
+                  Treinamento e suporte
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Conte com orientação para começar a utilizar o equipamento e
+                  suporte conforme as condições da assinatura.
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 19V5M4 19h16" />
+                    <path d="m7 15 4-4 3 2 5-6" />
+                  </svg>
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
+                  Evolua sua clínica
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Dê um passo em direção aos fluxos digitais de trabalho na
+                  odontologia.
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1769aa]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3 4 7v5c0 5 3.5 7.5 8 9 4.5-1.5 8-4 8-9V7l-8-4Z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold text-[#172b4d]">
+                  Mais tranquilidade
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Tenha um modelo de contratação com serviços e condições
+                  definidos previamente.
+                </p>
+              </article>
+
+              <article className="flex flex-col items-start rounded-2xl bg-[#172b4d] p-7 text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 12h16M13 5l7 7-7 7" />
+                  </svg>
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold">
+                  Pronto para dar o próximo passo?
+                </h3>
+                <p className="mt-3 flex-1 leading-7 text-slate-300">
+                  Conheça a proposta da ScannerGO e descubra se a assinatura faz
+                  sentido para sua clínica.
+                </p>
+
+                <a
+                  href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20assinatura%20ScannerGO."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-[#1769aa] px-6 py-3 font-semibold text-white transition hover:bg-[#105487]"
+                >
+                  Falar com a equipe
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Bloco 7 — Demonstração */}
+        <section
+          id="demonstracao"
+          className="relative isolate overflow-hidden bg-[#172b4d] px-6 py-20 sm:py-28"
+        >
+          {/* Elementos decorativos */}
+          <div
+            aria-hidden="true"
+            className="absolute -right-24 -top-24 -z-10 h-80 w-80 rounded-full border border-white/10"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute -right-12 -top-12 -z-10 h-56 w-56 rounded-full border border-white/10"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute -bottom-32 -left-20 -z-10 h-72 w-72 rounded-full bg-[#1769aa]/30 blur-3xl"
+          />
+
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* Texto e chamada para ação */}
+            <div>
+              <span className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-blue-200">
+                Conheça a ScannerGO
+              </span>
+
+              <h2 className="mt-6 max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Quer ver o scanner funcionando?
+              </h2>
+
+              <p className="mt-6 max-w-xl text-lg leading-8 text-blue-100/80">
+                Solicite uma apresentação e descubra como o escaneamento
+                intraoral pode fazer parte da rotina da sua clínica.
+              </p>
+
+              <a
+                href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20apresenta%C3%A7%C3%A3o%20do%20scanner%20intraoral%20da%20ScannerGO."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center rounded-lg bg-white px-7 py-4 text-sm font-semibold text-[#172b4d]! shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-50"
+              >
+                Agendar apresentação
+                <span aria-hidden="true" className="ml-3 text-lg">
+                  →
+                </span>
+              </a>
+
+              <p className="mt-4 text-sm text-blue-100/60">
+                Fale com nossa equipe pelo WhatsApp.
+              </p>
+            </div>
+
+            {/* Destaque visual */}
+            <div className="relative mx-auto w-full max-w-lg">
+              <div className="absolute -inset-4 rounded-4xl bg-[#1769aa]/20 blur-2xl" />
+
+              <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm sm:p-9">
+                <div className="flex items-center justify-between border-b border-white/10 pb-5">
+                  <span className="text-sm font-semibold tracking-wide text-white">
+                    SCANNERGO
+                  </span>
+                  <span className="h-2.5 w-2.5 rounded-full bg-blue-300" />
+                </div>
+
+                <div className="py-10 text-center sm:py-14">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      className="h-11 w-11 text-blue-200"
+                    >
+                      <rect
+                        x="10"
+                        y="5"
+                        width="28"
+                        height="38"
+                        rx="8"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                      />
+                      <path
+                        d="M17 15h14M17 21h14M17 27h8"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="24" cy="36" r="1.5" fill="currentColor" />
+                    </svg>
+                  </div>
+
+                  <h3 className="mt-7 text-xl font-semibold text-white sm:text-2xl">
+                    Tecnologia na prática
+                  </h3>
+
+                  <p className="mx-auto mt-3 max-w-sm leading-7 text-blue-100/70">
+                    Conheça o equipamento, tire suas dúvidas e entenda como
+                    funciona a proposta de assinatura.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3 border-t border-white/10 pt-5">
+                  <div className="h-1.5 flex-1 rounded-full bg-white/20">
+                    <div className="h-1.5 w-2/3 rounded-full bg-blue-300" />
+                  </div>
+                  <span className="text-xs text-blue-100/60">
+                    Conheça. Experimente. Decida.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bloco 8 - Dúvidas frequentes */}
         <section id="duvidas" className="bg-white px-6 py-20 lg:px-10">
           <div className="mx-auto max-w-4xl">
             <div className="mb-12 text-center">
@@ -863,6 +1149,262 @@ export default function Home() {
               >
                 Falar com a equipe
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Bloco final — Contato e formulário */}
+        <section id="contato" className="bg-[#f5f8fc] px-6 py-20 sm:py-28">
+          <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* Texto e imagem */}
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#1769aa]">
+                Vamos conversar?
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#172b4d] sm:text-4xl">
+                Sua clínica está pronta para a odontologia digital?
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Conheça a ScannerGO, tire suas dúvidas e descubra as condições
+                de assinatura para a sua clínica.
+              </p>
+
+              <div className="mt-8 overflow-hidden rounded-3xl border border-[#e1e8f0] bg-white p-5 sm:p-8">
+                <img
+                  src="/scanner.jpeg"
+                  alt="Scanner intraoral da ScannerGO"
+                  className="mx-auto h-auto max-h-90 w-full object-contain"
+                  loading="lazy"
+                />
+                <p className="mt-4 text-center text-sm text-gray-500">
+                  Conheça uma nova possibilidade para o fluxo digital da sua
+                  clínica.
+                </p>
+              </div>
+
+              <a
+                href="https://wa.me/5562981720585?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20a%20ScannerGO."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center justify-center rounded-lg border border-[#1769aa] px-6 py-3 font-semibold text-[#1769aa]! transition hover:bg-blue-50"
+              >
+                Prefiro falar pelo WhatsApp
+              </a>
+            </div>
+
+            {/* Bloco 9 - Formulário */}
+            <div className="rounded-3xl border border-[#e1e8f0] bg-white p-6 shadow-sm sm:p-9">
+              <h3 className="text-2xl font-bold text-[#172b4d]">
+                Fale com nossa equipe
+              </h3>
+
+              <p className="mt-2 text-sm leading-6 text-gray-500">
+                Preencha seus dados para demonstrar seu interesse na ScannerGO.
+              </p>
+
+              <form className="mt-8 space-y-5">
+                <div>
+                  <label
+                    htmlFor="nome"
+                    className="mb-2 block text-sm font-medium text-gray-700"
+                  >
+                    Nome completo *
+                  </label>
+                  <input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    placeholder="Seu nome"
+                    className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#1769aa] focus:ring-2 focus:ring-blue-100"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="clinica"
+                    className="mb-2 block text-sm font-medium text-gray-700"
+                  >
+                    Nome da clínica
+                  </label>
+                  <input
+                    id="clinica"
+                    name="clinica"
+                    type="text"
+                    autoComplete="organization"
+                    placeholder="Nome da clínica ou consultório"
+                    className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#1769aa] focus:ring-2 focus:ring-blue-100"
+                  />
+                </div>
+
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="cidade"
+                      className="mb-2 block text-sm font-medium text-gray-700"
+                    >
+                      Cidade *
+                    </label>
+                    <input
+                      id="cidade"
+                      name="cidade"
+                      type="text"
+                      required
+                      placeholder="Sua cidade"
+                      className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#1769aa] focus:ring-2 focus:ring-blue-100"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="uf"
+                      className="mb-2 block text-sm font-medium text-gray-700"
+                    >
+                      Estado (UF) *
+                    </label>
+                    <input
+                      id="uf"
+                      name="uf"
+                      type="text"
+                      maxLength={2}
+                      required
+                      placeholder="Ex.: GO"
+                      className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 uppercase outline-none transition placeholder:normal-case placeholder:text-gray-400 focus:border-[#1769aa] focus:ring-2 focus:ring-blue-100"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="whatsapp"
+                    className="mb-2 block text-sm font-medium text-gray-700"
+                  >
+                    WhatsApp *
+                  </label>
+                  <input
+                    id="whatsapp"
+                    name="whatsapp"
+                    type="tel"
+                    autoComplete="tel"
+                    required
+                    placeholder="(00) 00000-0000"
+                    className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#1769aa] focus:ring-2 focus:ring-blue-100"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="mb-2 block text-sm font-medium text-gray-700"
+                  >
+                    E-mail *
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    placeholder="voce@exemplo.com"
+                    className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#1769aa] focus:ring-2 focus:ring-blue-100"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="especialidade"
+                    className="mb-2 block text-sm font-medium text-gray-700"
+                  >
+                    Especialidade
+                  </label>
+                  <select
+                    id="especialidade"
+                    name="especialidade"
+                    defaultValue=""
+                    className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-[#1769aa] focus:ring-2 focus:ring-blue-100"
+                  >
+                    <option value="" disabled>
+                      Selecione sua especialidade
+                    </option>
+                    <option value="Ortodontia">Ortodontia</option>
+                    <option value="Implantodontia">Implantodontia</option>
+                    <option value="Protese">Prótese</option>
+                    <option value="Alinhadores">Alinhadores</option>
+                    <option value="Estetica">Estética</option>
+                    <option value="Clinica multidisciplinar">
+                      Clínica multidisciplinar
+                    </option>
+                    <option value="Outra">Outra</option>
+                  </select>
+                </div>
+
+                <fieldset>
+                  <legend className="text-sm font-medium text-gray-700">
+                    Você já utiliza scanner intraoral?
+                  </legend>
+                  <div className="mt-3 flex flex-wrap gap-5">
+                    <label className="flex items-center gap-2 text-sm text-gray-600">
+                      <input
+                        type="radio"
+                        name="ja_utiliza_scanner"
+                        value="Sim"
+                        className="accent-[#1769aa]"
+                      />
+                      Sim
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-600">
+                      <input
+                        type="radio"
+                        name="ja_utiliza_scanner"
+                        value="Não"
+                        className="accent-[#1769aa]"
+                      />
+                      Não
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend className="text-sm font-medium text-gray-700">
+                    Gostaria de agendar uma demonstração?
+                  </legend>
+                  <div className="mt-3 flex flex-wrap gap-5">
+                    <label className="flex items-center gap-2 text-sm text-gray-600">
+                      <input
+                        type="radio"
+                        name="deseja_demonstracao"
+                        value="Sim"
+                        className="accent-[#1769aa]"
+                      />
+                      Sim
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-600">
+                      <input
+                        type="radio"
+                        name="deseja_demonstracao"
+                        value="Não"
+                        className="accent-[#1769aa]"
+                      />
+                      Não
+                    </label>
+                  </div>
+                </fieldset>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-lg bg-[#1769aa] px-6 py-4 text-sm font-semibold text-white! transition hover:bg-[#12558b]"
+                >
+                  Quero conhecer a ScannerGO
+                </button>
+
+                <p className="text-xs leading-5 text-gray-500">
+                  Ao enviar seus dados, você concorda em ser contatado pela
+                  equipe ScannerGO para tratar da sua solicitação.
+                </p>
+              </form>
             </div>
           </div>
         </section>
