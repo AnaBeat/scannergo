@@ -479,6 +479,101 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Dúvidas frequentes */}
+        <section id="duvidas" className="bg-white px-6 py-20 lg:px-10">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-12 text-center">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#1769aa]">
+                FAQ
+              </span>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#172b4d] md:text-4xl">
+                Ficou com alguma dúvida?
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
+                Reunimos algumas informações para ajudar você a conhecer melhor
+                o ScannerGO.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <details className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-[#1769aa]/40">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#172b4d]">
+                  Como funciona o ScannerGO?
+                  <span className="text-xl text-[#1769aa] transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 leading-7 text-slate-600">
+                  O ScannerGO oferece acesso ao scanner intraoral por meio de um
+                  plano de assinatura, conforme as condições estabelecidas em
+                  contrato.
+                </p>
+              </details>
+
+              <details className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-[#1769aa]/40">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#172b4d]">
+                  Preciso comprar o equipamento?
+                  <span className="text-xl text-[#1769aa] transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 leading-7 text-slate-600">
+                  A proposta é permitir o acesso ao scanner por assinatura, sem
+                  a necessidade de realizar a compra inicial do equipamento.
+                  Consulte as condições do plano para saber como funciona a
+                  contratação.
+                </p>
+              </details>
+
+              <details className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-[#1769aa]/40">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#172b4d]">
+                  O computador está incluído?
+                  <span className="text-xl text-[#1769aa] transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 leading-7 text-slate-600">
+                  Não. A clínica precisa ter um computador compatível para
+                  utilizar o scanner. A compatibilidade deve ser confirmada
+                  antes da contratação.
+                </p>
+              </details>
+
+              <details className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-[#1769aa]/40">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#172b4d]">
+                  Existe suporte durante a utilização?
+                  <span className="text-xl text-[#1769aa] transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 leading-7 text-slate-600">
+                  O plano pode contemplar implantação, configuração, treinamento
+                  e suporte, conforme as condições definidas no contrato.
+                </p>
+              </details>
+            </div>
+
+            <div className="mt-12 rounded-3xl bg-[#f1f6fb] px-6 py-8 text-center md:px-10">
+              <h3 className="text-xl font-bold text-[#172b4d]">
+                Ainda tem dúvidas?
+              </h3>
+              <p className="mt-2 text-slate-600">
+                Converse com nossa equipe e conheça as condições do ScannerGO.
+              </p>
+              <a
+                href="https://wa.me/5562981720585"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-full bg-[#1769aa] px-6 py-3 font-semibold !text-white transition hover:bg-[#105487]"
+              >
+                Falar com a equipe
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
