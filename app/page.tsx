@@ -1172,9 +1172,11 @@ export default function Home() {
               </p>
 
               <div className="mt-8 overflow-hidden rounded-3xl border border-[#e1e8f0] bg-white p-5 sm:p-8">
-                <img
+                <Image
                   src="/scanner.jpeg"
                   alt="Scanner intraoral da ScannerGO"
+                  width={1200}
+                  height={800}
                   className="mx-auto h-auto max-h-90 w-full object-contain"
                   loading="lazy"
                 />
