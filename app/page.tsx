@@ -7,6 +7,7 @@ import {
   Screw,
   ToothbrushSparkles,
   Sparkle,
+  BuildingComplexPlus,
 } from "lucide-react";
 
 <link
@@ -746,7 +747,9 @@ export default function Home() {
               </div>
 
               <div className="rounded-2xl border border-gray-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="text-3xl">🏥</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#edf5fc] text-[#1769aa]">
+                  <BuildingComplexPlus size={25} strokeWidth={1.5} />
+                </div>
                 <h3 className="mt-5 text-lg font-semibold text-[#172b4d]">
                   Clínicas multidisciplinares
                 </h3>
