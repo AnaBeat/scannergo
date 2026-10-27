@@ -567,13 +567,59 @@ export default function Home() {
                 href="https://wa.me/5562981720585"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex rounded-full bg-[#1769aa] px-6 py-3 font-semibold !text-white transition hover:bg-[#105487]"
+                className="mt-6 inline-flex rounded-full bg-[#1769aa] px-6 py-3 font-semibold text-white! transition hover:bg-[#105487]"
               >
                 Falar com a equipe
               </a>
             </div>
           </div>
         </section>
+
+        {/* Rodapé */}
+        <footer className="border-t border-slate-200 bg-[#172b4d] px-6 py-10 text-white! lg:px-10">
+          <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div>
+              <a
+                href="#"
+                className="text-2xl font-bold tracking-tight text-white!"
+              >
+                Scanner<span className="text-[#70b7ed]">GO</span>
+              </a>
+              <p className="mt-3 max-w-sm text-sm leading-6 text-slate-300">
+                Mais acesso à tecnologia para transformar a rotina da sua
+                clínica.
+              </p>
+            </div>
+
+            <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-300">
+              <a href="#beneficios" className="transition hover:text-white">
+                Benefícios
+              </a>
+              <a href="#como-funciona" className="transition hover:text-white">
+                Como funciona
+              </a>
+              <a href="#duvidas" className="transition hover:text-white">
+                Dúvidas
+              </a>
+            </nav>
+
+            <a
+              href="https://wa.me/5562981720585"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit rounded-full bg-[#1769aa] px-6 py-3 text-sm font-semibold text-white! transition hover:bg-[#105487]"
+            >
+              Fale com a equipe
+            </a>
+          </div>
+
+          <div className="mx-auto mt-8 max-w-7xl border-t border-white/15 pt-6">
+            <p className="text-xs text-slate-400">
+              © {new Date().getFullYear()} ScannerGO. Todos os direitos
+              reservados.
+            </p>
+          </div>
+        </footer>
       </main>
     </div>
   );
