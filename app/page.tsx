@@ -1449,6 +1449,18 @@ export default function Home() {
               <a href="#duvidas" className="transition hover:text-white">
                 Dúvidas
               </a>
+
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new Event("scannergo-reopen-cookie-consent"),
+                  )
+                }
+                className="text-left transition hover:text-white"
+              >
+                Preferências de cookies
+              </button>
             </nav>
 
             <a
