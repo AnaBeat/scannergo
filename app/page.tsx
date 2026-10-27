@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Cabeçalho */}
-      <header className="border-b border-slate-200 bg-white">
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
           <a
             href="#"
@@ -139,16 +139,6 @@ export default function Home() {
       </header>
 
       <main>
-        {/* Botão flutuante — voltar ao topo */}
-        <a
-          href="#topo"
-          aria-label="Voltar ao início da página"
-          title="Voltar ao início"
-          className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-[#1769aa] text-2xl text-white! shadow-lg transition hover:-translate-y-1 hover:bg-[#12558b] focus:outline-none focus:ring-4 focus:ring-blue-200"
-        >
-          <span aria-hidden="true">↑</span>
-        </a>
-
         {/* Bloco 1 - Hero */}
 
         <section id="topo" className="overflow-hidden bg-white">
