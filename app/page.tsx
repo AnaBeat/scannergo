@@ -1365,7 +1365,7 @@ export default function Home() {
               </p>
 
               <form
-                action="https://formsubmit.co/abeatrizbcosta@gmail.com"
+                action="https://formsubmit.co/inumaruhelton@gmail.com"
                 method="POST"
                 className="mt-8 space-y-5"
               >
