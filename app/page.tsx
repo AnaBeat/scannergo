@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   HeartPlus,
   Scan,
@@ -19,6 +19,29 @@ import {
 
 export default function Home() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const [imagemAtual, setImagemAtual] = useState(0);
+  const imagensScanner = [
+    {
+      src: "/scanner-1.jpg",
+      alt: "Scanner intraoral Runyes 3DS Mega V5",
+    },
+    {
+      src: "/scanner-4.jpg",
+      alt: "Scanner intraoral em demonstração",
+    },
+    {
+      src: "/scanner-5.jpg",
+      alt: "Detalhe do scanner intraoral",
+    },
+  ];
+
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setImagemAtual((atual) => (atual + 1) % imagensScanner.length);
+    }, 4000);
+
+    return () => clearInterval(intervalo);
+  }, [imagensScanner.length]);
 
   return (
     <div className="min-h-screen">
@@ -364,14 +387,58 @@ export default function Home() {
             </div>
 
             <div className="mt-14 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-              <div className="flex min-h-80 items-center justify-center rounded-3xl bg-[#f5f8fc] p-8 sm:min-h-110 sm:p-12">
-                <Image
-                  src="/scanner-1.jpg"
-                  alt="Scanner intraoral Runyes 3DS Mega V5"
-                  width={800}
-                  height={600}
-                  className="h-auto max-h-100 w-full object-contain"
-                />
+              <div className="flex min-h-80 flex-col items-center justify-center rounded-3xl bg-[#f5f8fc] p-8 sm:min-h-110 sm:p-12">
+                <div className="flex w-full flex-1 items-center justify-center">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setImagemAtual(
+                        (imagemAtual - 1 + imagensScanner.length) %
+                          imagensScanner.length,
+                      )
+                    }
+                    aria-label="Ver imagem anterior"
+                    className="mr-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#dbe5ef] bg-white text-2xl text-[#172b4d] transition hover:bg-[#eaf3fb]"
+                  >
+                    ‹
+                  </button>
+
+                  <Image
+                    src={imagensScanner[imagemAtual].src}
+                    alt={imagensScanner[imagemAtual].alt}
+                    width={800}
+                    height={600}
+                    className="h-auto max-h-100 w-full object-contain"
+                  />
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setImagemAtual((imagemAtual + 1) % imagensScanner.length)
+                    }
+                    aria-label="Ver próxima imagem"
+                    className="ml-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#dbe5ef] bg-white text-2xl text-[#172b4d] transition hover:bg-[#eaf3fb]"
+                  >
+                    ›
+                  </button>
+                </div>
+
+                <div className="mt-5 flex items-center justify-center gap-2">
+                  {imagensScanner.map((imagem, indice) => (
+                    <button
+                      key={imagem.src}
+                      type="button"
+                      onClick={() => setImagemAtual(indice)}
+                      aria-label={`Ver imagem ${indice + 1}`}
+                      aria-current={imagemAtual === indice ? "true" : undefined}
+                      className={`h-2.5 rounded-full transition-all ${
+                        imagemAtual === indice
+                          ? "w-7 bg-[#1769aa]"
+                          : "w-2.5 bg-[#c5d2e0] hover:bg-[#8da9c4]"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -1129,62 +1196,22 @@ export default function Home() {
 
             {/* Destaque visual */}
             <div className="relative mx-auto w-full max-w-lg">
-              <div className="absolute -inset-4 rounded-4xl bg-[#1769aa]/20 blur-2xl" />
+              <div className="absolute -inset-4 rounded-4xl bg-[#1769aa]/30 blur-2xl" />
 
-              <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm sm:p-9">
-                <div className="flex items-center justify-between border-b border-white/10 pb-5">
-                  <span className="text-sm font-semibold tracking-wide text-white">
-                    SCANNERGO
-                  </span>
-                  <span className="h-2.5 w-2.5 rounded-full bg-blue-300" />
-                </div>
-
-                <div className="py-10 text-center sm:py-14">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 48 48"
-                      fill="none"
-                      className="h-11 w-11 text-blue-200"
-                    >
-                      <rect
-                        x="10"
-                        y="5"
-                        width="28"
-                        height="38"
-                        rx="8"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                      />
-                      <path
-                        d="M17 15h14M17 21h14M17 27h8"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                      <circle cx="24" cy="36" r="1.5" fill="currentColor" />
-                    </svg>
-                  </div>
-
-                  <h3 className="mt-7 text-xl font-semibold text-white sm:text-2xl">
-                    Tecnologia na prática
-                  </h3>
-
-                  <p className="mx-auto mt-3 max-w-sm leading-7 text-blue-100/70">
-                    Conheça o equipamento, tire suas dúvidas e entenda como
-                    funciona a proposta de assinatura.
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-3 border-t border-white/10 pt-5">
-                  <div className="h-1.5 flex-1 rounded-full bg-white/20">
-                    <div className="h-1.5 w-2/3 rounded-full bg-blue-300" />
-                  </div>
-                  <span className="text-xs text-blue-100/60">
-                    Conheça. Experimente. Decida.
-                  </span>
-                </div>
+              <div className="relative overflow-hidden rounded-3xl border border-white/15 shadow-2xl">
+                <Image
+                  src="/scanner-3.jpg"
+                  alt="Scanner intraoral da ScannerGO"
+                  width={1200}
+                  height={800}
+                  className="mx-auto h-auto max-h-90 w-full object-contain"
+                  loading="lazy"
+                />
               </div>
+
+              <p className="mt-4 text-center text-sm text-blue-100/70">
+                Conheça a tecnologia ScannerGO de perto.
+              </p>
             </div>
           </div>
         </section>
@@ -1337,7 +1364,17 @@ export default function Home() {
                 Preencha seus dados para demonstrar seu interesse na ScannerGO.
               </p>
 
-              <form className="mt-8 space-y-5">
+              <form
+                action="https://formsubmit.co/abeatrizbcosta@gmail.com"
+                method="POST"
+                className="mt-8 space-y-5"
+              >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Novo contato pelo site ScannerGO"
+                />
+
                 <div>
                   <label
                     htmlFor="nome"
