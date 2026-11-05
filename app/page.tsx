@@ -8,6 +8,7 @@ import {
   ToothbrushSparkles,
   Sparkle,
   BuildingComplexPlus,
+  MonitorX,
 } from "lucide-react";
 
 <link
@@ -276,20 +277,7 @@ export default function Home() {
               {/* Compra tradicional */}
               <div className="rounded-3xl border border-slate-200 bg-white p-7 md:p-9">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    className="h-6 w-6 text-slate-600"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3 7h18M5 7l1 13h12l1-13M9 7V4h6v3"
-                    />
-                  </svg>
+                  <MonitorX />
                 </div>
 
                 <h3 className="mt-5 text-xl font-bold text-[#172b4d]">
