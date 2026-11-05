@@ -549,6 +549,67 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="galeria" className="bg-[#f5f8fc] px-6 py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#1769aa]">
+                ScannerGO em detalhes
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#172b4d] sm:text-4xl">
+                A tecnologia por trás de um novo fluxo digital.
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Conheça um pouco mais sobre o escaneamento intraoral e as
+                possibilidades da odontologia digital.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-8 md:grid-cols-2">
+              <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
+                <Image
+                  src="/scanner-1.jpg"
+                  alt="Scanner intraoral em destaque em ambiente odontológico"
+                  width={1536}
+                  height={1024}
+                  className="h-72 w-full object-cover sm:h-96"
+                />
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#172b4d]">
+                    Tecnologia em suas mãos
+                  </h3>
+                  <p className="mt-2 leading-7 text-gray-600">
+                    Conheça o scanner intraoral e seu papel na transformação dos
+                    atendimentos odontológicos.
+                  </p>
+                </div>
+              </article>
+
+              <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
+                <Image
+                  src="/escaneamento-intraoral.jpg"
+                  alt="Dentista realizando escaneamento intraoral em paciente"
+                  width={1536}
+                  height={1024}
+                  className="h-72 w-full object-cover sm:h-96"
+                />
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#172b4d]">
+                    Escaneamento intraoral
+                  </h3>
+                  <p className="mt-2 leading-7 text-gray-600">
+                    Uma experiência digital que permite visualizar a arcada
+                    dentária em modelos tridimensionais.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
         {/* Bloco 4 - Como funciona */}
         <section
           id="como-funciona"
