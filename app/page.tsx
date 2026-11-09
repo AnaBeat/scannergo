@@ -24,7 +24,7 @@ export default function Home() {
   const imagensScanner = [
     {
       src: "/scanner-1.jpg",
-      alt: "Scanner intraoral Runyes 3DS Mega V5",
+      alt: "Scanner intraoral",
     },
     {
       src: "/scanner-4.jpg",
@@ -241,7 +241,7 @@ export default function Home() {
                 <div className="flex min-h-80 items-center justify-center rounded-3xl border border-slate-200 bg-[#f8fafc] p-6 md:min-h-115">
                   <Image
                     src="/scanner.jpeg"
-                    alt="Scanner intraoral Runyes 3DS Mega V5"
+                    alt="Scanner intraoral"
                     width={700}
                     height={600}
                     priority
@@ -368,9 +368,8 @@ export default function Home() {
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Conheça os recursos do scanner intraoral Runyes 3DS Mega (V5) e
-                descubra novas possibilidades para o fluxo digital da sua
-                clínica.
+                Conheça os recursos do scanner intraoral e descubra novas
+                possibilidades para o fluxo digital da sua clínica.
               </p>
             </div>
 
@@ -541,7 +540,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
               <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#1769aa]">
-                ScannerGO em detalhes
+                Scanner em detalhes
               </span>
 
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#172b4d] sm:text-4xl">
@@ -555,6 +554,7 @@ export default function Home() {
             </div>
 
             <div className="mt-14 grid gap-8 md:grid-cols-2">
+              {/* Card 1 */}
               <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
                 <Image
                   src="/scanner-1.jpg"
@@ -575,6 +575,7 @@ export default function Home() {
                 </div>
               </article>
 
+              {/* Card 2 */}
               <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
                 <Image
                   src="/escaneamento-intraoral.jpg"
@@ -591,6 +592,50 @@ export default function Home() {
                   <p className="mt-2 leading-7 text-gray-600">
                     Uma experiência digital que permite visualizar a arcada
                     dentária em modelos tridimensionais.
+                  </p>
+                </div>
+              </article>
+
+              {/* Card 3 */}
+              <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
+                <Image
+                  src="/scanner-6.jpeg"
+                  alt="Scanner Runyes 3.0 Pro conectado ao computador"
+                  width={1024}
+                  height={1536}
+                  className="h-72 w-full object-cover sm:h-96"
+                />
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#172b4d]">
+                    Scanner em funcionamento
+                  </h3>
+                  <p className="mt-2 leading-7 text-gray-600">
+                    Equipamento conectado ao software para uma experiência de
+                    escaneamento digital.
+                  </p>
+                </div>
+              </article>
+
+              {/* Card 5 - Vídeo */}
+              <article className="overflow-hidden rounded-3xl bg-white shadow-sm">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="h-72 w-full bg-[#172b4d] object-contain sm:h-96"
+                >
+                  <source src="/scanner-3d.mp4" type="video/mp4" />
+                  Seu navegador não suporta a reprodução deste vídeo.
+                </video>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#172b4d]">
+                    Visualização do modelo 3D
+                  </h3>
+                  <p className="mt-2 leading-7 text-gray-600">
+                    Veja como a arcada dentária é representada digitalmente em
+                    um modelo tridimensional.
                   </p>
                 </div>
               </article>
